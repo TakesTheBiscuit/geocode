@@ -4,11 +4,11 @@
 //@THIS SHOULD BECOME A CLASS IN FUTURE 
 
 //testing singles right now
-//print_r(lookup('Staples, TF3 4AS, UK', 'Staples', 'TF3 4AS'));
-//exit; 
+print_r(lookup('DHL Express	Isle Of Man Business Park	Cooil	Isle Of Man	IM2 2SE', 'Staples', 'TF3 4AS'));
+exit; 
 
 //run the whole lot  
-$run = lookupAllCsv();
+//$run = lookupAllCsv();
   
    
 function lookupAllCsv(){  
@@ -16,7 +16,7 @@ function lookupAllCsv(){
 	ini_set('auto_detect_line_endings',TRUE);
 	$rowsCount = 0;
 	$geoCodedAddresses = 0;
-	if (($handle = fopen("import.csv", "r")) !== FALSE)
+	if (($handle = fopen("final_batch.csv", "r")) !== FALSE)
 	{
 	    while (($data = fgetcsv($handle, 10000, ",")) !== FALSE)
 	    {
